@@ -4,6 +4,7 @@ set -eux
 brew bundle --file=- <<EOF
 cask "1password"
 cask "brave-browser"
+cask "clipy"
 brew "coreutils"
 cask "docker"
 brew "go"
