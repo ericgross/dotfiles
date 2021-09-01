@@ -3,6 +3,7 @@ set -eux
 
 brew bundle --file=- <<EOF
 cask "1password"
+cask "balenaetcher"
 cask "brave-browser"
 cask "clipy"
 brew "coreutils"
@@ -17,6 +18,7 @@ cask "ngrok"
 cask "roboform"
 cask "rubymine"
 cask "slack"
+cask "telegram"
 cask "visual-studio-code"
 brew "watch"
 EOF
