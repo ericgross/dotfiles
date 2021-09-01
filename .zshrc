@@ -121,6 +121,7 @@ setopt inc_append_history
 setopt share_history
 
 export FONTAWESOME_NPM_AUTH_TOKEN=506C6E43-F020-4DE6-A2E5-DD47C5395967
+export EDITOR=vim
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
