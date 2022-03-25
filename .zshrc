@@ -80,7 +80,7 @@ plugins=(
   git
   bundler
   dotenv
-  osx
+  macos
   rake
   rbenv
   ruby
@@ -115,6 +115,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+eval "$(zoxide init zsh)"
+
 # Appends every command to the history file once it is executed
 setopt inc_append_history
 # Reloads the history whenever you use it
@@ -122,6 +124,10 @@ setopt share_history
 
 export FONTAWESOME_NPM_AUTH_TOKEN=506C6E43-F020-4DE6-A2E5-DD47C5395967
 export EDITOR=vim
+
+export PATH="/usr/local/sbin:$PATH"
+
+alias rubocop_changed="git ls-files -m | xargs ls -1 2>/dev/null | grep '\.rb$' | tee >(xargs rubocop -A) >(xargs reek)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

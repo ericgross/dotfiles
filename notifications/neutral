@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+curl --silent --insecure -X POST -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIwZWVlODY5YzY0ZmE0ODkzYmFlZWZkYTNhOTQ3MDRiMSIsImlhdCI6MTY0Nzk4NzIyNCwiZXhwIjoxOTYzMzQ3MjI0fQ.Uv80JbDYy2ICojdulREuLV4USMKxrfObYKBvB90UBlk" -H "Content-Type: application/json" -d "{ \"entity_id\": [\"light.eric_office\"], \"rgbw_color\": [0,0,0,255] }" https://192.168.1.125:8123/api/services/light/turn_on
